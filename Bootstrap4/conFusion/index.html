@@ -30,10 +30,32 @@
                         <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Menu</a></li>
                         <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                     </ul>
+                    <span class='navbar-text'>
+                        <a data-toggle='modal' data-target='#loginModal'>
+                            <span class='fa fa-sign-in'></span> Login
+                        </a>
+                    </span>
                 </div>
             </a>
         </div>
     </nav>
+
+    <div id='loginModal' class='modal fade' role='dialog'>
+        <div class='modal-dialog modal-lg' role='content'>
+            <!-- Modal content -->
+            <div class='modal-content'>
+                <div class='modal-header'>
+                    <hf class='motal-title'>Login</hf>
+                    <button type='button' class='close' date-dismiss='modal'>
+                        &times;
+                    </button>
+                </div>
+                <div class='modal-body'>
+
+                </div>
+            </div>
+        </div>
+    </div>
     <header class="jumbotron">
         <div class='container'>
             <div class='row row-header'>
@@ -47,7 +69,11 @@
                 </div>
                 <div class='col-6 col-sm-3 align-self-center'>
                     <button class='btn btn-sm bg-warning' href='#reserve'>
-                        <a class = 'text-white' href='#reserve'><strong>Reserve Table</strong></a>
+                        <a class = 'text-white'
+                        data-toggle='tooltip' data-html='true' 
+                        title='Or Call us at <br><strong>+852 12345678</strong>'
+                        data-placement='bottom'
+                        href='#reserve'><strong>Reserve Table</strong></a>
                     </button>
                 </div>
             </div>
@@ -189,6 +215,11 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
 </body>
 
 </html>
