@@ -78,6 +78,7 @@
             </div>
         </div>
     </div>
+
     <header class="jumbotron">
         <div class='container'>
             <div class='row row-content'>
@@ -138,15 +139,70 @@
                     <img class='d-flex mr-3'
                         src='img/logo.png'>
                 </div>
+
                 <div class='col-6 col-sm-3 align-self-center'>
-                    <button class='btn btn-sm bg-warning' href='#reserve'>
-                        <a class = 'text-white'
-                        data-toggle='tooltip' data-html='true' 
-                        title='Or Call us at <br><strong>+852 12345678</strong>'
-                        data-placement='bottom'
-                        href='#reserve'><strong>Reserve Table</strong></a>
+                    <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#reserveModal">
+                        <h3>Reserve Table</h3>
                     </button>
                 </div>
+                <div id='reserveModal' class='modal fade' role='dialog' aria-labelledby='reserveModalLabel' aria-hidden='true'>
+                    <div class='modal-dialog modal-lg' role='content'>
+                        <div class='modal-content'>
+                            <div class='modal-header text-dark'>
+                                <hf class='modal-title' id='reserveModalLabel'>
+                                    <strong>Reserve a Table</strong>
+                                </hf>
+                                <button type='button' class='close' data-dismiss='modal' aria-label='Close'>
+                                    <span aria-hidden='true'>&times;</span>
+                                </button>
+                            </div>
+                            <div class='modal-body'>
+                                <div class='card card-body bg-light' id='reserve'>
+                                    <div>
+                                        <hf class='text-dark'><strong>Number of Guests</strong></hf>
+                                    </div>
+                                    <div>
+                                        <label class='btn btn-light'>
+                                            <input type='radio' name='guests' id='guests1' checked> 1
+                                            <input type='radio' name='guests' id='guests2'> 2
+                                            <input type='radio' name='guests' id='guests3'> 3
+                                            <input type='radio' name='guests' id='guests4'> 4
+                                            <input type='radio' name='guests' id='guests5'> 5
+                                            <input type='radio' name='guests' id='guests6'> 6
+                                        </label>    
+                                    </div>
+                                    <div>
+                                        <button class='btn btn-lg bg-success' type='radio' name='smoking' id='nonsmoking' checked>
+                                            <strong class='text-white'>Non-Smoking</strong>
+                                        </button>
+                                        <button class='btn btn-lg bg-danger type='radio' name='smoking' id='smoking'>
+                                            <strong class='text-white'>Smoking</strong>
+                                        </button>
+                                    </div>
+                                    <div>
+                                        <h4>Date and Time</h4>
+                                    </div>
+                                    <div class='row'>
+                                        <div class='col-12 col-md-6'>
+                                            <input type='date' class='form-control' id='date' name='date'>
+                                        </div>    
+                                        <div class='col-12 col-md-6'>
+                                            <input type='time' class='form-control' id='time' name='time'>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='modal-footer'>
+                                <button type='submit' class='btn btn-primary btn-sm ml-1'>
+                                    <strong>Reserve</strong>
+                                </button>
+                                <button type="button" class="btn btn-secondary btn-sm ml-1" data-dismiss="modal">Cancel</button>
+    
+                            </div>    
+                        </div>  
+                    </div>
+                </div>
+                    
             </div>
         </div>
     </header>
@@ -200,45 +256,7 @@
                 </div>
             </div>
         </div>
-        <div class='row row-content justify-content-center'>
-            <div class='col-12 col-sm-8'>
-                <div class='card card-body bg-light' id='reserve'>
-                    <a name='reserve'></a>
-                    <h3 class='card-header bg-warning text-white'>Reserve a Table</h3>
-                    <div class='card-body'>
-                        <div>
-                            <h4>Number of Guests</h4>
-                        </div>
-                        <div>
-                            <label class='btn btn-light'>
-                                <input type='radio' name='guests' id='guests1' checked> 1
-                                <input type='radio' name='guests' id='guests2'> 2
-                                <input type='radio' name='guests' id='guests3'> 3
-                                <input type='radio' name='guests' id='guests4'> 4
-                                <input type='radio' name='guests' id='guests5'> 5
-                                <input type='radio' name='guests' id='guests6'> 6
-                            </label>    
-                        </div>
-                        <div>
-                            <h4>Date and Time</h4>
-                        </div>
-                        <div class='row'>
-                            <div class='col-12 col-md-6'>
-                                <input type='date' class='form-control' id='date' name='date'>
-                            </div>    
-                            <div class='col-12 col-md-6'>
-                                <input type='time' class='form-control' id='time' name='time'>
-                            </div>
-                        </div>
-                        <div class='row'>
-                            <button type='submit' class='btn btn-primary btn-lg'>
-                                <strong>Reserve</strong>
-                            </button>
-                        </div>    
-                    </div>
-                </div>
-            </div>
-        </div>
+
     </div>
 
     <footer class='footer'>
@@ -287,7 +305,7 @@
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script>
-        $(document).ready(function() {
+        $(document).ready(function(){
             $('[data-toggle="tooltip"]').tooltip();
         });
     </script>
