@@ -214,3 +214,12 @@
         </div>
     </div>
 </div>
+
+
+
+
+                if($('#reserveModal').hasClass('show') ) {
+                    $('#reserveModal').modal('hide');
+                } else {
+                    $('#reserveModal').modal('show');
+                }

@@ -67,6 +67,26 @@ body{
     }
 }
 
+.modal {
+    .modal-header {
+        background:$background-dark;
+        color:floralwhite;
+        button {
+            color:floralwhite;
+        }
+    }
+    .modal-body {
+        background:$background-pale;
+        color:#0f0f0f;
+        btn {
+            background:$background-pale;
+        }
+    }
+    .modal-footer {
+        background:$background-light;
+    }
+}
+
 #carouselButton {
     right: 0px;
     position: absolute;

@@ -30,8 +30,13 @@
                         <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Menu</a></li>
                         <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                     </ul>
+<!--   $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+<!--   $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+<!--   $$$$$$$$ LOGIN BUTTON HERE  $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+<!--   $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+<!--   $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
                     <span class='navbar-text'>
-                        <a data-toggle='modal' data-target='#loginModal'>
+                        <a id='login-modal-button'>
                             <span class='fa fa-sign-in'></span> Login
                         </a>
                     </span>
@@ -40,15 +45,13 @@
         </div>
     </nav>
 
-    <div id='loginModal' class='modal fade' role='dialog'>
+    <div id='login-modal' class='modal fade' role='dialog'>
         <div class='modal-dialog modal-lg' role='content'>
             <!-- Modal content -->
             <div class='modal-content'>
                 <div class='modal-header'>
-                    <hf class='motal-title'>Login</hf>
-                    <button type='button' class='close' date-dismiss='modal'>
-                        &times;
-                    </button>
+                    <hf class='modal-title'>Login</hf>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class='modal-body'>
                     <form>
@@ -142,72 +145,71 @@
                     <img class='d-flex mr-3'
                         src='img/logo.png'>
                 </div>
-
+<!--   $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+<!--   $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+<!--   $$$$$$$$ RESERVE MODAL BUTTON HERE $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+<!--   $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+<!--   $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
                 <div class='col-6 col-sm-3 align-self-center'>
-                    <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#reserveModal">
-                        <h5>Reserve Table</h5>
+                    <button type="button" class="btn btn-warning btn-lg" id="reserve-modal-button">
+                        <strong>Reserve Table</strong>
                     </button>
                 </div>
-                <div id='reserveModal' class='modal fade' role='dialog' aria-labelledby='reserveModalLabel' aria-hidden='true'>
-                    <div class='modal-dialog modal-lg' role='content'>
-                        <div class='modal-content'>
-                            <div class='modal-header text-dark'>
-                                <hf class='modal-title' id='reserveModalLabel'>
-                                    <h3>Reserve a Table</h3>
-                                </hf>
-                                <button type='button' class='close' data-dismiss='modal' aria-label='Close'>
-                                    <span aria-hidden='true'>&times;</span>
+                <div class='col-6 col-sm-3 align-self-center'>
+                    <!-- Trigger the modal with a button -->
+                    <!-- Modal -->
+                    <div class="modal fade" id="myModal" role="dialog">
+                        <div class="modal-dialog">
+                        <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h3 class="modal-title">Reserve a Table</h3>
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+                            <div class="modal-body">
+                                <div>
+                                    <hf><strong>Number of Guests</strong></hf>
+                                </div>
+                            <div>
+                                <label class='btn'>
+                                    <input type='radio' name='guests' id='guests1' checked> 1
+                                    <input type='radio' name='guests' id='guests2'> 2
+                                    <input type='radio' name='guests' id='guests3'> 3
+                                    <input type='radio' name='guests' id='guests4'> 4
+                                    <input type='radio' name='guests' id='guests5'> 5
+                                    <input type='radio' name='guests' id='guests6'> 6
+                                </label>    
+                            </div>
+                            <div>
+                                <button class='btn btn-lg bg-success' type='radio' name='smoking' id='nonsmoking' checked>
+                                    <strong class='text-white'>Non-Smoking</strong>
+                                </button>
+                                <button class='btn btn-lg bg-danger' type='radio' name='smoking' id='smoking'>
+                                    <strong class='text-white'>Smoking</strong>
                                 </button>
                             </div>
-                            <div class='modal-body'>
-                                <div class='card card-body bg-light' id='reserve'>
-                                    <div>
-                                        <hf class='text-dark'><strong>Number of Guests</strong></hf>
-                                    </div>
-                                    <div>
-                                        <label class='btn btn-light'>
-                                            <input type='radio' name='guests' id='guests1' checked> 1
-                                            <input type='radio' name='guests' id='guests2'> 2
-                                            <input type='radio' name='guests' id='guests3'> 3
-                                            <input type='radio' name='guests' id='guests4'> 4
-                                            <input type='radio' name='guests' id='guests5'> 5
-                                            <input type='radio' name='guests' id='guests6'> 6
-                                        </label>    
-                                    </div>
-                                    <div>
-                                        <button class='btn btn-lg bg-success' type='radio' name='smoking' id='nonsmoking' checked>
-                                            <strong class='text-white'>Non-Smoking</strong>
-                                        </button>
-                                        <button class='btn btn-lg bg-danger type='radio' name='smoking' id='smoking'>
-                                            <strong class='text-white'>Smoking</strong>
-                                        </button>
-                                    </div>
-                                    <div>
-                                        <h4>Date and Time</h4>
-                                    </div>
-                                    <div class='row'>
-                                        <div class='col-12 col-md-6'>
-                                            <input type='date' class='form-control' id='date' name='date'>
-                                        </div>    
-                                        <div class='col-12 col-md-6'>
-                                            <input type='time' class='form-control' id='time' name='time'>
-                                        </div>
-                                    </div>
+                            <div>
+                                <hf><strong>Date and Time</strong></hf>
+                            </div>
+                            <div class='row'>
+                                <div class='col-12 col-md-6'>
+                                    <input type='date' class='form-control' id='date' name='date'>
+                                </div>    
+                                <div class='col-12 col-md-6'>
+                                    <input type='time' class='form-control' id='time' name='time'>
                                 </div>
                             </div>
-                            <div class='modal-footer'>
-                                <button type='submit' class='btn btn-primary btn-sm ml-1'>
-                                    <strong>Reserve</strong>
-                                </button>
-                                <button type="button" class="btn btn-secondary btn-sm ml-1" data-dismiss="modal">Cancel</button>
-    
-                            </div>    
-                        </div>  
+                        </div>
+                        <div class="modal-footer">
+                            <button type='submit' class='btn btn-primary btn-lg ml-1'>Reserve</button>
+                            <button type="button" class="btn btn-default btn-lg ml-1" data-dismiss="modal">Cancel</button>
+                        </div>
                     </div>
                 </div>
-                    
             </div>
-        </div>
+        </div> <!-- closes modal-->
+    </div> <!-- closes row -->
+</div> <!-- closes container -->
     </header>
 
     <div class="container">
@@ -312,8 +314,21 @@
             $('[data-toggle="tooltip"]').tooltip();
         });
     </script>
+<!--   $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+<!--   $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+<!--   $$$$$$$$ JAVASCRIPT HERE  $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+<!--   $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+<!--   $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+
     <script>
         $(document).ready(function() {
+            $("#reserve-modal-button").click(function(){
+                $("#myModal").modal();
+            });
+            $("#login-modal-button").click(function(){
+                $("#login-modal").modal();
+            });
+            
             $('#mycarousel').carousel({ interval: 2000 });
             $('#carouselButton').click(function() {
                 if ($('#carouselButton').children('span').hasClass('fa-pause') ){
